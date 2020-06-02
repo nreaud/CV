@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+:root {
+  --A4SheetWidth: 21cm;
+  --thirdWidth: 7cm;
+  --A4SheetHeight: 29.7cm;
+  --triangleUnderWidth: 10cm;
+  --triangleUnderHeight: 10cm;
+  --triangleOverHeight: 5cm;
+  --pictureRadius: 4cm;
+  --colorDark: #142850;
+  --colorLight: #27496d;
+  --colorHiglight: #ff5200;
+  --colorText: white;
+  --font: Calibri, "Times New Roman", Cambria, Cochin, Georgia, Times, serif;
+  --biggestFontSize: 40px;
+  --bigFontSize: 25px;
+  --mediumFontSize: 17px;
+  --mediumSmallFontSize: 16px;
+  --fontSize: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.A4sheet {
+  border: thin solid black;
+  width: var(--A4SheetWidth);
+  height: var(--A4SheetHeight);
+  /*centered*/
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font);
+  font-size: var(--fontSize);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  margin-block-start: 0.33em;
+  margin-block-end: 1.5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-size: var(--bigFontSize);
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.icon {
+  width: 0.75cm;
+  vertical-align: sub;
+  margin-right: 0.5em;
+}
+
+dd {
+  margin-inline-start: 0.5em;
+}
+
+p {
+  white-space: pre-wrap; /*to accept \n and \t*/
+}
+
+.triangleUnder {
+  position: absolute;
+  border-right: var(--triangleUnderWidth) solid transparent;
+  border-top: var(--triangleUnderHeight) solid var(--colorDark);
+  z-index: -1;
+}
+
+.triangleOver {
+  position: absolute;
+  border-right: var(--A4SheetWidth) solid var(--colorHiglight);
+  border-bottom: var(--triangleOverHeight) solid transparent;
+}
+
+.square {
+  position: absolute;
+  z-index: -2;
+  background-color: var(--colorLight);
+  width: var(--thirdWidth);
+  height: var(--A4SheetHeight);
+}
+
+.cv {
+  display: grid;
+  grid-template-columns: repeat(3, var(--thirdWidth));
+}
+
+.pictureFrame {
+  border: medium solid var(--colorHiglight);
+  border-radius: 50%;
+  width: var(--pictureRadius);
+  height: var(--pictureRadius);
+  /*centered*/
+  margin-left: auto;
+  margin-right: auto;
+  /*end center*/
+}
+
+.pictureFrame img {
+  border-radius: 50%;
+  width: var(--pictureRadius);
+  height: var(--pictureRadius);
+}
+
+.aboutMe {
+  grid-column: 1;
+  color: var(--colorText);
+}
+
+.aboutMe .spaceTop {
+  padding-bottom: 3.5cm;
+}
+
+.aboutMe .spaceText {
+  padding-bottom: 1cm;
+}
+
+.aboutMe dt {
+  font-size: var(--bigFontSize);
+  margin-block-end: 0.4em;
+  font-weight: bold;
+}
+
+.aboutMe .skill {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.aboutMe .skillLevel {
+  margin-right: 1cm;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutMe .text {
+  margin-left: 1.5cm;
+}
+
+.aboutJob {
+  grid-column: 2/4; /*columns 2 and 3*/
+  margin-left: 1cm;
+  margin-right: 1cm;
+}
+
+.aboutJob .spaceTop {
+  padding-bottom: 3cm;
+}
+
+.aboutJob h1 {
+  color: var(--colorHiglight);
+  font-weight: bolder;
+  font-size: var(--biggestFontSize);
+  background-image: linear-gradient(
+    to right,
+    var(--colorHighlight),
+    var(--colorHighlight)
+  );
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.aboutJob h1:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5cm;
+  left: 0;
+  height: 0;
+  width: 30%;
+  border-bottom: 2px solid var(--colorHiglight);
+}
+
+.aboutJob .jobSubTitle {
+  font-size: var(--bigFontSize);
+}
+
+.aboutJob h3 {
+  color: var(--colorHiglight);
+}
+
+.aboutJob h4 {
+  font-size: var(--mediumFontSize);
+  margin-block-start: 0.5em;
+  margin-block-end: 0.2em;
+}
+
+.aboutJob h5 {
+  margin-block-start: 0em;
+  margin-block-end: 0.3em;
+  font-size: var(--mediumSmallFontSize);
+}
+
+.aboutJob dl {
+  margin-block-start: 0.5em;
 }
