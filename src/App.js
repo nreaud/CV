@@ -49,8 +49,8 @@ const MY_EXPERIENCES = [
     to: "12/2019",
     details: [
       "Développement d’APIs en Java 8",
-      "Test Unitaires",
-      "Correction d'anomalies sur le pool d'API sinistre + Monitoring",
+      "Tests Unitaires",
+      "Corrections d'anomalies sur le pool d'API sinistre + Monitoring",
       "Méthodes agiles",
     ],
   },
@@ -62,8 +62,8 @@ const MY_EXPERIENCES = [
     from: "12/2017",
     to: "04/2019",
     details: [
-      "Accompagnement clients",
-      "Correction d'anomalies + Monitoring",
+      "Accompagnement client",
+      "Corrections d'anomalies + Monitoring",
       "Évolutions applicatives Java8 + Scala",
       "Création d'index Elasticsearch",
     ],
@@ -84,10 +84,12 @@ const MY_EXPERIENCES = [
 ];
 
 const TEXT_PROFIL =
-  "J'ai pour objectif personnel à court/moyen terme d'avoir" +
-  " développé un ou plusieurs sites Web de A à Z (front, back et déploiement)" +
-  " puis de développer des versions mobiles de ces sites et à moyen/long terme" +
-  " j'aimerais concevoir des IA.\n\rDisponible immédiatement.";
+  "Je suis à la recherche d'un emploi dans le Web et/ou les applications" +
+  " mobiles afin de continuer à monter en compétence dans ces domaines. En" +
+  " parallèle je développe des projets informatiques et je compte me former" +
+  " sur l'intelligence artificielle." +
+  "\r\n\r\nÀ long terme j'espère vendre mes propres applications web et " +
+  "peut-être monter mon entreprise.";
 
 const FORMATION = [
   {
@@ -95,10 +97,7 @@ const FORMATION = [
     where: "Université de Poitiers, Poitiers",
     from: "2015",
     to: "2017",
-    details: [
-      "Spécifier, concevoir, développer et valider des logiciels, en " +
-        "maîtriser le cycle de vie, en s’appuyant en particulier sur des approches objet.",
-    ],
+    details: [],
   },
 ];
 
