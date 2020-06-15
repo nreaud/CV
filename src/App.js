@@ -12,6 +12,7 @@ import gears from "./resource/mySkills.png";
 import languages from "./resource/myLanguages.png";
 import mail from "./resource/myMail.png";
 import phone from "./resource/myPhone.png";
+import picture from "./resource/cv1.png";
 import profil from "./resource/profil1.png";
 import qualities from "./resource/myQualities.png";
 import smiley from "./resource/mySmiley.png";
@@ -21,10 +22,12 @@ import universityHat from "./resource/myUniversityHat.png";
 const SKILL_SCALE = 5;
 
 const MY_SKILLS = [
-  { skill: "Java8", skillLevel: 3 },
+  { skill: "Java", skillLevel: 4 },
+  { skill: "Spring", skillLevel: 3 },
   { skill: "ReactJS", skillLevel: 2 },
-  { skill: "BDD", skillLevel: 2 },
+  { skill: "Git", skillLevel: 4 },
   { skill: "ElasticSearch", skillLevel: 3 },
+  { skill: "Android", skillLevel: 2 },
 ];
 
 const LANGUAGES_SPOKEN = [
@@ -49,7 +52,7 @@ const MY_EXPERIENCES = [
     to: "12/2019",
     details: [
       "Développement d’APIs en Java 8",
-      "Tests Unitaires",
+      "Tests Unitaires - JUNIT",
       "Corrections d'anomalies sur le pool d'API sinistre + Monitoring",
       "Méthodes agiles",
     ],
@@ -85,11 +88,9 @@ const MY_EXPERIENCES = [
 
 const TEXT_PROFIL =
   "Je suis à la recherche d'un emploi dans le Web et/ou les applications" +
-  " mobiles afin de continuer à monter en compétence dans ces domaines. En" +
-  " parallèle je développe des projets informatiques et je compte me former" +
-  " sur l'intelligence artificielle." +
-  "\r\n\r\nÀ long terme j'espère vendre mes propres applications web et " +
-  "peut-être monter mon entreprise.";
+  " mobiles afin de solidifier mes compétences dans ces domaines. Sur mon temps" +
+  " libre je développe des projets informatiques et je compte me former" +
+  " sur l'intelligence artificielle.";
 
 const FORMATION = [
   {
@@ -134,7 +135,7 @@ class App extends Component {
         <div className="cv">
           <div className="aboutMe">
             <div className="spaceTop" />
-            <Picture img={profil} />
+            <Picture img={picture} />
             <div className="spaceText" />
             <div className="text">
               <Contact
