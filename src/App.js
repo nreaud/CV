@@ -27,7 +27,7 @@ const MY_SKILLS = [
   { skill: "ReactJS", skillLevel: 2 },
   { skill: "Git", skillLevel: 4 },
   { skill: "ElasticSearch", skillLevel: 3 },
-  { skill: "Android", skillLevel: 2 },
+  { skill: "ReactNative", skillLevel: 1 },
 ];
 
 const LANGUAGES_SPOKEN = [
@@ -35,7 +35,7 @@ const LANGUAGES_SPOKEN = [
   { skill: "Anglais", skillLevel: 4 },
 ];
 
-const INTERESTS = ["Jeux de société", "Jeux vidéo", "Cuisine"];
+const INTERESTS = ["Ju-jitsu", "Jeux de société", "Cuisine"];
 
 const QUALITIES = [
   "Logique",
@@ -129,17 +129,15 @@ class App extends Component {
   render() {
     return (
       <div className="A4sheet">
-        <div className="square" />
+        <div className="aboutMeBackgroundRectangle" />
         <div className="triangleUnder" />
         <div className="triangleOver" />
         <div className="cv">
           <div className="aboutMe">
-            <div className="spaceTop" />
             <Picture img={picture} />
-            <div className="spaceText" />
-            <div className="text">
+            <div className="aboutMeContent">
               <Contact
-                adress="46Ter rue pierre chantelauze, 79000 Niort"
+                adress="245 rue du faubourg du pont neuf, 86000 Poitiers"
                 imgAdress={address}
                 mailingAdress="nicolasreaud@gmail.com"
                 imgMail={mail}
@@ -161,7 +159,6 @@ class App extends Component {
             </div>
           </div>
           <div className="aboutJob">
-            <div className="spaceTop" />
             <h1 className="nameTitle">Nicolas RÉAUD</h1>
             <h2 className="jobSubTitle">Développeur full-stack</h2>
             <h3>

@@ -1,10 +1,12 @@
 :root {
   --A4SheetWidth: 21cm;
-  --thirdWidth: 7cm;
+  --CvcontainerWidth: 18cm;
+  --thirdWidth: 6cm;
   --A4SheetHeight: 29.7cm;
-  --triangleUnderWidth: 10cm;
-  --triangleUnderHeight: 10cm;
-  --triangleOverHeight: 5cm;
+  --CVcontainerHeight: 25.7cm;
+  --triangleUnderWidth: 8cm;
+  --triangleUnderHeight: 8cm;
+  --triangleOverHeight: 4cm;
   --pictureRadius: 4cm;
   --colorDark: #142850;
   --colorLight: #27496d;
@@ -20,8 +22,8 @@
 
 .A4sheet {
   border: thin solid black;
-  width: var(--A4SheetWidth);
-  height: var(--A4SheetHeight);
+  width: var(--CvcontainerWidth);
+  height: var(--CVcontainerHeight);
   /*centered*/
   margin-left: auto;
   margin-right: auto;
@@ -29,15 +31,10 @@
   font-size: var(--fontSize);
 }
 
-h2 {
-  margin-block-start: 0.33em;
-  margin-block-end: 1.5em;
-}
-
 h3 {
   font-size: var(--bigFontSize);
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 .icon {
@@ -47,11 +44,18 @@ h3 {
 }
 
 dd {
-  margin-inline-start: 1.5em;
+  margin-inline-start: 1em;
 }
 
 p {
   white-space: pre-wrap; /*to accept \n and \t*/
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.cv {
+  display: grid;
+  grid-template-columns: repeat(3, var(--thirdWidth));
 }
 
 .triangleUnder {
@@ -63,24 +67,19 @@ p {
 
 .triangleOver {
   position: absolute;
-  border-right: var(--A4SheetWidth) solid var(--colorHiglight);
+  border-right: var(--CvcontainerWidth) solid var(--colorHiglight);
   border-bottom: var(--triangleOverHeight) solid transparent;
 }
 
-.square {
+.aboutMeBackgroundRectangle {
   position: absolute;
   z-index: -2;
   background-color: var(--colorLight);
   width: var(--thirdWidth);
-  height: var(--A4SheetHeight);
+  height: var(--CVcontainerHeight);
 }
 
-.cv {
-  display: grid;
-  grid-template-columns: repeat(3, var(--thirdWidth));
-}
-
-.pictureFrame {
+.aboutMe .pictureFrame {
   border: medium solid var(--colorHiglight);
   border-radius: 50%;
   width: var(--pictureRadius);
@@ -88,6 +87,8 @@ p {
   /*centered*/
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2cm;
+  margin-bottom: 1cm;
   /*end center*/
 }
 
@@ -102,17 +103,9 @@ p {
   color: var(--colorText);
 }
 
-.aboutMe .spaceTop {
-  padding-bottom: 3.5cm;
-}
-
-.aboutMe .spaceText {
-  padding-bottom: 1cm;
-}
-
 .aboutMe dt {
   font-size: var(--bigFontSize);
-  margin-block-end: 0.4em;
+  margin-block-end: 0.2em;
   font-weight: bold;
 }
 
@@ -122,11 +115,11 @@ p {
 }
 
 .aboutMe .skillLevel {
-  margin-right: 1cm;
+  margin-right: 0.5cm;
 }
 
-.aboutMe .text {
-  margin-left: 1.5cm;
+.aboutMe .aboutMeContent {
+  margin-left: 1cm;
 }
 
 .aboutJob {
@@ -135,11 +128,7 @@ p {
   margin-right: 1cm;
 }
 
-.aboutJob .spaceTop {
-  padding-bottom: 3cm;
-}
-
-.aboutJob h1 {
+.aboutJob .nameTitle {
   color: var(--colorHiglight);
   font-weight: bolder;
   font-size: var(--biggestFontSize);
@@ -151,12 +140,14 @@ p {
   display: inline-block;
   text-decoration: none;
   position: relative;
+  margin-top: 3cm;
+  margin-block-end: 0.5cm;
 }
 
-.aboutJob h1:after {
+.aboutJob .nameTitle:after {
   content: "";
   position: absolute;
-  bottom: -0.5cm;
+  bottom: -0.25cm;
   left: 0;
   height: 0;
   width: 30%;
@@ -164,17 +155,19 @@ p {
 }
 
 .aboutJob .jobSubTitle {
-  font-size: var(--bigFontSize);
+  margin-block-start: 0.33em;
   margin-block-end: 1em;
+  font-size: var(--bigFontSize);
 }
 
 .aboutJob h3 {
   color: var(--colorHiglight);
+  margin-bottom: 0.3cm;
 }
 
 .aboutJob h4 {
   font-size: var(--mediumFontSize);
-  margin-block-start: 0.5em;
+  margin-block-start: 0em;
   margin-block-end: 0.2em;
 }
 
@@ -186,4 +179,5 @@ p {
 
 .aboutJob dl {
   margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
