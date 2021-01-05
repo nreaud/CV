@@ -59,7 +59,7 @@ const MY_EXPERIENCES = [
   },
   {
     title:
-      'Développeur back-end - Maintient applicatif d’un " Puit de données ' +
+      'Développeur back-end - Maintien applicatif d’un " Puit de données ' +
       '" et de son applicatif de population',
     where: "MAIF, Niort",
     from: "12/2017",
@@ -89,8 +89,7 @@ const MY_EXPERIENCES = [
 const TEXT_PROFIL =
   "Je suis à la recherche d'un emploi dans le Web et/ou les applications" +
   " mobiles afin de solidifier mes compétences dans ces domaines. Sur mon temps" +
-  " libre je développe des projets informatiques et je compte me former" +
-  " sur l'intelligence artificielle.";
+  " libre je développe des projets informatiques.";
 
 const FORMATION = [
   {
