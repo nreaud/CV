@@ -1,0 +1,47 @@
+:root {
+  /*constants*/
+  --CvcontainerWidth: 18cm;
+  --thirdWidth: 6cm;
+  --CVcontainerHeight: 25.7cm;
+  --triangleUnderWidth: 8cm;
+  --triangleUnderHeight: 8cm;
+  --triangleOverHeight: 4cm;
+  --font: Calibri, "Times New Roman", Cambria, Cochin, Georgia, Times, serif;
+  --fontSize: 15px;
+  --colorDark: #142850;
+  --colorLight: #27496d;
+  --colorHiglight: #ff5200;
+  --colorText: white;
+}
+
+.A4sheet {
+  border: thin solid black;
+  width: var(--CvcontainerWidth);
+  height: var(--CVcontainerHeight);
+  /*centered*/
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font);
+  font-size: var(--fontSize);
+}
+
+.aboutMeBackgroundRectangle {
+  position: absolute;
+  z-index: -2;
+  background-color: var(--colorLight);
+  width: var(--thirdWidth);
+  height: var(--CVcontainerHeight);
+}
+
+.triangleUnder {
+  position: absolute;
+  border-right: var(--triangleUnderWidth) solid transparent;
+  border-top: var(--triangleUnderHeight) solid var(--colorDark);
+  z-index: -1;
+}
+
+.triangleOver {
+  position: absolute;
+  border-right: var(--CvcontainerWidth) solid var(--colorHiglight);
+  border-bottom: var(--triangleOverHeight) solid transparent;
+}

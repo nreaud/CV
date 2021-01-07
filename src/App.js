@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Contact from "./Contact";
 import JobList from "./JobList";
+import JobListSimple from "./JobListSimple";
 import List from "./List";
 import Picture from "./Picture";
 import SkillList from "./SkillList";
@@ -50,27 +51,46 @@ const MY_EXPERIENCES = [
     where: "MAIF, Niort",
     from: "04/2019",
     to: "12/2019",
-    details: [
-      "Développement d’APIs en Java 8",
-      "Tests Unitaires - JUNIT",
-      "Corrections d'anomalies sur le pool d'API sinistre + Monitoring",
-      "Méthodes agiles",
+    overview: `J'ai intégré une squad en méthode agile en tant que développeur/concepteur constitué de 6 personnes (1PO, 1 lead dev, 1 MOA, 2 dev et moi). La squad avait pour mission  
+    de reprendre des APIs existantes sur le domaine des sinistres, il fallait les harmoniser, revoir la qualité et notamment ajouter des TUs ainsi que gérer les anomalies. 
+    De plus la squad avait à charge les évolutions du pool d'API ainsi que son enrichissment avec de nouveaux endpoints.`,
+    technicalStack: ["Java 8", "JUnit", "Sonar", "Jenkins, Git"],
+    successes: [
+      "Harmonisation de l'ensemble des APIs existantes",
+      "Couverture de test à plus de 90% sur l'ensemble des APIs",
+      "Création de nouveaux endpoints",
+    ],
+    missions: [
+      "Développement en Java8 + Test unitaires",
+      "Conceptions techniques d'APIs",
+      "Analyse d'anomalies",
     ],
   },
   {
-    title:
-      'Développeur back-end - Maintien applicatif d’un " Puit de données ' +
-      '" et de son applicatif de population',
+    title: 'Développeur back-end - Maintien applicatif d’un " Puit de données ',
     where: "MAIF, Niort",
     from: "12/2017",
     to: "04/2019",
-    details: [
+    overview: `Maintien applicatif d'un "Puit de données", c'est à dire d'un applicatif en Java mettant à jour un réplica de la base donnée sous la forme d'indexes ElasticSearch 
+    offrant des options de recherche avancées. J'intervenais en tant que développeur dans une équipe longtemps consituée d'une reférente et d'1 autre dev. J'avais pour
+    tâche d'accompagner les clients dans l'ajout de nouveaux indexes, ainsi que la correction d'anomalies et l'évolution de la solution applicative.`,
+    technicalStack: "Java8, ElasticSearch, Git",
+    successes: [
+      "Reconnu par les clients en tant que référent privilégié",
+      "Ajout de plusieurs indexes et gestion de leur mise à jour",
+      "Montée de version du client ElasticSearch de 2 à 5",
+      "Correction d'anomalies récurrentes",
+    ],
+    missions: [
       "Accompagnement client",
       "Corrections d'anomalies + Monitoring",
-      "Évolutions applicatives Java8 + Scala",
-      "Création d'index Elasticsearch",
+      "Évolutions applicatives Java8",
+      "Création d'indexes Elasticsearch",
     ],
   },
+];
+
+const INTERNSHIP = [
   {
     title:
       "Stage développeur full-stack – Applicatif de suivi de livraison pour" +
@@ -170,7 +190,12 @@ class App extends Component {
               title="Expériences professionnelles"
               img={suitcase}
             />
-            <JobList list={FORMATION} title="Formation" img={universityHat} />
+            <JobListSimple list={INTERNSHIP} title="Stage" img={suitcase} />
+            <JobListSimple
+              list={FORMATION}
+              title="Formation"
+              img={universityHat}
+            />
           </div>
         </div>
       </div>
